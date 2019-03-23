@@ -126,6 +126,7 @@ video {
 
   .mainProjects {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -256,6 +257,11 @@ i   {
 }
 
 @media screen and (max-width: 400px) {
+    .heading {
+        font-size: 50px;
+        margin: 0.2em auto;
+    }
+
     .nikPic {
         height: 200px;
         width: 200px;
@@ -263,5 +269,37 @@ i   {
 
     .page1 {
         height: 95vh;
+    }
+
+
+    .devProjectImg {
+        position: static;
+        top: initial;
+        left: initial;
+    }
+
+    .projectImg {
+        height: 300px;
+        width: 300 px;
+        top: initial;
+        left:initial;
+        position: static;
+
+    }
+    .mainProjects {
+        position: static;
+        top: initial;
+        left: initial;
+        transform: none;
+    }
+
+    .devProjectContainer {
+        position: static;
+        height: 300px;
+        width: 300px;
+    }
+
+    .page3 {
+        height: 100%;
     }
 }
