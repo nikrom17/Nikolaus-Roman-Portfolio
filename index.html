@@ -11,25 +11,19 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
-  <script src="scripts.js"></script>
   <body>
     <div class="page1">
       <div class="page1Container">
         <div class="nameContainer">
           <p class="heading">Nikolaus Roman </p>
           <p class="subHeading">I'm a web developer with a nontraditional background</p>
-        </div>
-        <div class="mainBottom">
-          <div>
-            <img class="nikPic" src="src/me.jpg" alt="Nikolaus Roman" height="400px"> 
-          </div>
+          <img class="nikPic" src="src/me.jpg" alt="Nikolaus Roman" height="400px"> 
           <div class="scrollArrow">
             <i class="fas fa-angle-down"></i>
           </div>
         </div>
       </div>
     </div>
-    <hr>
     <div class="page2">
       <div class="page2Container">
         <div class="player">
@@ -38,39 +32,46 @@
         </div>
       </div>
     </div>
-    <hr>
     <div class="page3">
       <div class="page3Container">
         <p class="heading">Now I do this...</p>
         <div class="mainProjects"> 
-
-          <div class="devProjectContainer">
-            <div class="devProjectText">
-              <p class="projectDetails">Burger Builder</p>
-              <p class="projectDetails">React App</p>
+          <a href="https://github.com/nikrom17/Burger-Builder" target="_blank">
+            <div class="devProjectContainer">
+              <div class="devProjectText">
+                <p class="projectDetails">Burger Builder</p>
+                <p class="projectDetails">Online Ordering Portal</p>
+                <p class="projectDetails">React Application</p>
+              </div>
+              <div class="devProjectImg">
+                <img class="projectImg" src="src/burgerBuilder.png" alt="Burger Builder" height="500px"> 
+              </div>
             </div>
-            <div class="devProjectImg">
-              <img class="projectImg" src="src/burgerBuilder.png" alt="Burger Builder" height="500px"> 
+          </a>
+          <a href="https://devpost.com/software/pulse-hit94n" target="_blank">
+            <div class="devProjectContainer">
+              <div class="devProjectText">
+                <p class="projectDetails">Passive Heart Failure Monitor</p>
+                <p class="projectDetails">TechCrunch Hackathon Finalist</p>
+                <p class="projectDetails">Novartis Sponsor Winner</p>
+              </div>
+              <div class="devProjectImg">
+                <img class="projectImg" src="src/pulse.png" alt="Pulse" height="500px"> 
+              </div>
             </div>
-          </div>
-          <div class="devProjectContainer">
-            <div class="devProjectText">
-              <p class="projectDetails">Passive Heart Failure Monitor</p>
-              <p class="projectDetails">TechCrunch Hackathon Finalist</p>
-              <p class="projectDetails">Novartis Sponsor Winner</p>
+          </a>
+          <a href="https://github.com/nikrom17/InCar-AppStore-DeveloperPortal" target="_blank">
+            <div class="devProjectContainer">
+              <div class="devProjectText">
+                <p class="projectDetails">Ford In-Car App Store</p>
+                <p class="projectDetails">Developer Portal</p>
+                <p class="projectDetails">React Application</p>
+              </div>
+              <div class="devProjectImg">
+                <img class="projectImg" src="src/FordDevPortal.png" alt="Ford Developer Portal" height="500px"> 
+              </div>
             </div>
-            <div class="devProjectImg">
-              <img class="projectImg" src="src/pulse.png" alt="Pulse" height="500px"> 
-            </div>
-          </div>
-          <div class="devProjectContainer">
-            <div class="devProjectText">
-              <p class="projectDetails">Ford In-Car App Store</p>
-            </div>
-            <div class="devProjectImg">
-              <img class="projectImg" src="src/FordDevPortal.png" alt="Ford Developer Portal" height="500px"> 
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -82,24 +83,27 @@
             <p class="heading">About Me</p>
             <hr class="separator">
             <p class="minorHeading">Entrepreneurial web developer from the Windy City</p>
-            <p>I enjoy solving complex problems and turning them into simple, scalable and intuitive applications. When I'm not coding or pushing pixels, you'll find me cooking, managing my Airbnb listings or helping my dad automate parts of his accounting bussiness.</p>
+            <p class="aboutMeBody">I enjoy solving complex problems and turning them into simple, scalable and intuitive applications. When I'm not coding or pushing pixels, you'll find me cooking, managing my Airbnb listings or helping my dad automate parts of his accounting bussiness.</p>
           </div>
-          <div class="contactMe">
-            <div>
-              <p class="minorHeading"> Let's get in touch!</p>
-            </div>
-            <div class="contactIcons">
-              <div class="iconContainer">
-                <i class="fab fa-linkedin"></i>
+          <div class="contactMeContainer">
+            <div class="contactMe">
+              <div>
+                <p class="minorHeading"> Let's get in touch!</p>
               </div>
-              <div class="iconContainer">
-                <i class="fab fa-github"></i>
-              </div>
-              <div class="iconContainer">
-                <i class="far fa-envelope"></i>
-              </div>
-              <div class="iconContainer">
-                <i class="far fa-folder"></i>
+              <div class="contactIcons">
+                <a href="https://www.linkedin.com/in/nikrom17/" target="_blank">
+                  <div class="iconContainer">
+                    <i class="fab fa-linkedin"></i>
+                  </div>
+                </a>
+                <div class="iconContainer">
+                  <a href="https://github.com/nikrom17" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+                  <div class="iconContainer" onclick="copyTextToClipboard()">
+                    <i class="far fa-envelope"></i>
+                  </div>
               </div>
             </div>
           </div>  
@@ -113,4 +117,34 @@
       </div>
     </div>
   </body>
+  <script>
+    function fallbackCopyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+
+      try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Fallback: Copying text command was ' + msg);
+      } catch (err) {
+        console.error('Fallback: Oops, unable to copy', err);
+      }
+
+      document.body.removeChild(textArea);
+    }
+    function copyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
+      if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text);
+        return;
+      }
+      navigator.clipboard.writeText(text).then(function() {
+        console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+        console.error('Async: Could not copy text: ', err);
+      });
+    }
+</script>
 </html>
