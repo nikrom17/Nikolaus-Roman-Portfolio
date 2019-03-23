@@ -260,4 +260,8 @@ i   {
         height: 200px;
         width: 200px;
     }
+
+    .page1 {
+        height: 95vh;
+    }
 }
