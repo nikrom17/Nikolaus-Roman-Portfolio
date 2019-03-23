@@ -302,4 +302,12 @@ i   {
     .page3 {
         height: 100%;
     }
+
+    .skillsContainer {
+        width: 300px;;
+    }
+
+    .page4Container {
+        flex-direction: column;
+    }
 }
