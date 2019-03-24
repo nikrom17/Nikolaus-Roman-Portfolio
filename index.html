@@ -107,10 +107,11 @@
                   <i class="fab fa-github"></i>
                 </a>
               </div>
-                <div class="iconContainer" onclick="copyTextToClipboard()">
+                <div class="iconContainer envelope" onmouseover="showText('black')" onmouseout="showText('white')" onmousedown="copyTextToClipboard()">
                   <i class="far fa-envelope"></i>
                 </div>
               </div>
+              <p id="email">Click to copy email to clipboard</p>
             </div>
           </div>  
 
@@ -118,6 +119,9 @@
     </div>
   </body>
   <script>
+    function showText(color) {
+      document.getElementById('email').style.color = color;
+    }  
     function fallbackCopyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
       var textArea = document.createElement("textarea");
       textArea.value = text;

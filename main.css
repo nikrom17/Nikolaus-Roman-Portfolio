@@ -138,8 +138,8 @@ video {
 
 .devProjectContainer {
     position: relative;
-    /* height: 500px;
-    width:500px; */
+    height: 500px;
+    width:500px;
     margin: 20px;
     text-align: center;
     cursor: pointer;
@@ -255,6 +255,12 @@ i   {
   cursor: pointer;
 }
 
+#email {
+    color: white;
+}
+
+
+
 @media screen and (max-width: 450px) {
     body {
         font-size: 15px;
@@ -304,8 +310,8 @@ i   {
 
     .devProjectContainer {
         position: static;
-        /* height: 300px; */
-        /* width: 300px; */
+        height: initial;
+        width: initial;
     }
 
 
@@ -357,6 +363,10 @@ i   {
 
     .contactMeContainer {
         width: 100%;
+    }
+
+    #email {
+        color: black;
     }
 
 }
