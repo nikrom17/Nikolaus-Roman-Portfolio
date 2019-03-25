@@ -167,12 +167,12 @@ video {
     background-color: white;
     border-radius: 5px;
     width: 90%;
+    margin-bottom: 10px;
 }
 
 .projectDetails {
     text-align: center;
     margin: 5px;
-    padding: 0.2em 0;
 }
 
 .title {
@@ -345,6 +345,8 @@ i   {
 
     .devProjectContainer:hover .devProjectText{
         all: unset;
+        margin-bottom: 10px;
+        display: block;
     }
 
     .devProjectContainer:hover .devProjectImg {
@@ -367,8 +369,8 @@ i   {
     }
 
     .devProjectContainer {
-        height: 450px;
-        width: 450px;
+        height: 550px;
+        width: 550px;
     }
 }
 
@@ -414,11 +416,16 @@ i   {
 
     .projectImg {
         height: 300px;
-        width: 300 px;
+        width: 300px;
         top: initial;
         left:initial;
         position: static;
 
+    }
+    
+    .devProjectContainer {
+        height: 400px;
+        width: 400px;
     }
 }
 
