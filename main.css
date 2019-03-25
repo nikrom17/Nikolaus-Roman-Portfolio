@@ -79,11 +79,16 @@ a {
     border-radius: 20%;
     margin: 10% auto;
 }
+
 .scrollArrow {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     flex-grow: 1;
+}
+
+.fa-angle-down {
+    margin-bottom: 20px;
 }
 
 .page2Container {
