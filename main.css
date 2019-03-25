@@ -74,10 +74,10 @@ a {
 }
 
 .nikPic {
-    max-height:300px;
-    max-width: 300px;
+    height: 250px;
+    width: 250px;
     border-radius: 20%;
-    margin: 10% auto;
+    margin: 5% auto;
 }
 
 .scrollArrow {
@@ -219,14 +219,16 @@ video {
     position: relative;
     width:50%;
     max-height: 50%;
-    transform: translate(0%, 50%);
 }
 
 .skillsBreakdown {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
+}
+
+.skillsImg {
+    max-width: 100%;
+    height: auto;
+    transform: translate(0%, 150px);
 }
 
 .contactMeContainer {
@@ -266,7 +268,6 @@ i   {
     .aboutMeHeading {
         font-size: 75px;
     }
-
 }
 
 @media screen and (max-width: 850px) {
@@ -301,6 +302,10 @@ i   {
 
     .contactMe {
         transform: translate(0%, 20%);
+    }
+    
+    .skillsImg {
+        transform: none;
     }
 }
 
@@ -446,5 +451,4 @@ i   {
         height: 125px;
         width: 125px;
     }
-
 }
