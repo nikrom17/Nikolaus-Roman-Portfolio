@@ -11,7 +11,8 @@
     <script>
       function showText(color) {
         document.getElementById('email').style.color = color;
-      }  
+      }
+
       function fallbackCopyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
         var textArea = document.createElement("textarea");
         textArea.value = text;
@@ -28,6 +29,7 @@
         }
         document.body.removeChild(textArea);
       }
+
       function copyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
         if (!navigator.clipboard) {
           fallbackCopyTextToClipboard(text);
@@ -143,8 +145,7 @@
               </div>
               <p id="email">Click to copy email to clipboard</p>
             </div>
-          </div>  
-
+          </div>
       </div>
     </div>
   </body>
