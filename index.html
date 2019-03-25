@@ -8,6 +8,38 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+      function showText(color) {
+        document.getElementById('email').style.color = color;
+      }  
+      function fallbackCopyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+          var successful = document.execCommand('copy');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          console.log('Fallback: Copying text command was ' + msg);
+        } catch (err) {
+          console.error('Fallback: Oops, unable to copy', err);
+        }
+        document.body.removeChild(textArea);
+      }
+      function copyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
+        if (!navigator.clipboard) {
+          fallbackCopyTextToClipboard(text);
+          return;
+        }
+        navigator.clipboard.writeText(text).then(function() {
+          console.log('Copying to clipboard was successful!');
+        }, function(err) {
+          console.error('Could not copy text: ', err);
+        });
+      }
+  </script>
   </head>
   <body>
     <div class="page1">
@@ -86,7 +118,7 @@
         </div>
         <div class="skillsContainer">
           <div class="skillsBreakdown">
-            <img class="skillsImg" src="src/Skils Chart.png" alt="Skills Chart"> 
+            <img class="skillsImg" src="src/SkilsChart.png" alt="Skills Chart"> 
           </div>
         </div>
         <div class="contactMeContainer">
@@ -116,37 +148,4 @@
       </div>
     </div>
   </body>
-  <script>
-    function showText(color) {
-      document.getElementById('email').style.color = color;
-    }  
-    function fallbackCopyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
-      var textArea = document.createElement("textarea");
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-
-      try {
-        var successful = document.execCommand('copy');
-        var msg = successful ? 'successful' : 'unsuccessful';
-        console.log('Fallback: Copying text command was ' + msg);
-      } catch (err) {
-        console.error('Fallback: Oops, unable to copy', err);
-      }
-
-      document.body.removeChild(textArea);
-    }
-    function copyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
-      if (!navigator.clipboard) {
-        fallbackCopyTextToClipboard(text);
-        return;
-      }
-      navigator.clipboard.writeText(text).then(function() {
-        console.log('Async: Copying to clipboard was successful!');
-      }, function(err) {
-        console.error('Async: Could not copy text: ', err);
-      });
-    }
-</script>
 </html>
