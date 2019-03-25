@@ -27,10 +27,7 @@ body {
     min-height: 100vh;
 }
 .page4 {
-    height: 100vh;
-}
-.page5 {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 a {
@@ -260,6 +257,85 @@ i   {
     color: white;
 }
 
+@media screen and (max-width: 1370px) {
+    .aboutMeHeading {
+        font-size: 75px;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .page4Container {
+        flex-direction: column;
+    }
+
+    .personalStory {
+        width: 100%;
+    }
+
+    .skillsContainer {
+        position: static;
+        width:100%;
+        transform: none;
+    }
+
+    .skillsBreakdown {
+        width: 100%;
+        position: static;
+        top: initial;
+        transform: none;
+    }
+
+    .contactMeContainer {
+        width: 100%;
+    }
+
+    #email {
+        color: black;
+    }
+
+    .contactMe {
+        transform: translate(0%, 20%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .heading {
+        font-size: 60px;
+    }
+
+    .nikPic {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    body {
+        font-size: 20px;
+    }
+
+    .projectImg {
+        height: 475px;
+    }
+
+    .devProjectContainer {
+        height: 475px;
+        width: 475px;
+    }
+}
+
+@media screen and (min-height: 651px) and (max-height: 850px) {
+    .nameContainer {
+        margin-top: 150px;
+    }
+
+    video {
+        height: 875px;
+        top: 90%;
+        transform: translate(-50%, -90%);
+    }
+}
+
 @media screen and (max-width: 450px) {
     body {
         font-size: 15px;
@@ -332,44 +408,6 @@ i   {
     }
 }
 
-@media screen and (max-width: 850px) {
-    .page4Container {
-        flex-direction: column;
-    }
-
-    .personalStory {
-        width: 100%;
-    }
-
-    .skillsContainer {
-        position: static;
-        width:100%;
-        transform: none;
-    }
-
-    .skillsBreakdown {
-        width: 100%;
-        position: static;
-        top: initial;
-        transform: none;
-    }
-
-    .contactMeContainer {
-        width: 100%;
-    }
-
-    #email {
-        color: black;
-    }
-}
-
-
-@media screen and (max-width: 1370px) {
-    .aboutMeHeading {
-        font-size: 75px;
-    }
-
-}
 
 
 @media screen and (min-height: 400px) and (max-height: 650px) {
@@ -383,17 +421,4 @@ i   {
         transform: translate(-50%, -60%);
     }
 
-}
-
-
-@media screen and (min-height: 651px) and (max-height: 850px) {
-    .nameContainer {
-        margin-top: 150px;
-    }
-
-    video {
-        height: 875px;
-        top: 90%;
-        transform: translate(-50%, -90%);
-    }
 }
