@@ -103,7 +103,6 @@ a {
 }
 
 video {
-    /* opacity: 0.50; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -170,9 +169,12 @@ video {
 
 .projectDetails {
     text-align: center;
-    /* font-size: 35px; */
     margin: 5px;
     padding: 0.2em 0;
+}
+
+.title {
+    font-weight: 400;
 }
 
 .devProjectImg {
@@ -210,7 +212,6 @@ video {
 .aboutMeBody {
     margin-top: 15%;
 }
-
 
 .skillsContainer {
     position: relative;
@@ -259,8 +260,6 @@ i   {
     color: white;
 }
 
-
-
 @media screen and (max-width: 450px) {
     body {
         font-size: 15px;
@@ -272,10 +271,6 @@ i   {
 
     .minorHeading {
         font-size: 15px;
-    }
-
-    .nameContainer {
-        /* margin-top: 100px; */
     }
 
     .nikPic {
@@ -335,11 +330,9 @@ i   {
     .page3 {
         height: 100%;
     }
+}
 
-    .skillsContainer {
-        width: 300px;;
-    }
-
+@media screen and (max-width: 850px) {
     .page4Container {
         flex-direction: column;
     }
@@ -367,6 +360,13 @@ i   {
 
     #email {
         color: black;
+    }
+}
+
+
+@media screen and (max-width: 1370px) {
+    .aboutMeHeading {
+        font-size: 75px;
     }
 
 }
