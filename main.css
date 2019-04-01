@@ -78,6 +78,7 @@ a {
     width: 250px;
     border-radius: 20%;
     margin: 5% auto;
+    -webkit-filter: grayscale(65%); /* Safari 6.0 - 9.0 */
 }
 
 .scrollArrow {
