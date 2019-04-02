@@ -1,48 +1,32 @@
-// let scrollCount = 0;
+function showText(color) {
+    document.getElementById('email').style.color = color;
+  }
 
-// function preventDefault(e) {
-//       e.preventDefault();
-//       e.returnValue = false;
-// }
+  function fallbackCopyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
 
-// var lastScrollTop = 0;
-// window.addEventListener("scroll", function(e) {
-//     if (scrollCount > 20) {
-//         preventDefault(e);
-//         window.scrollBy(0, 500);
-//         scrollCount = 0;
-//     } else {
-//         scrollCount++;
-//         preventDefault(e);
-//     }
-// }, false);
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Fallback: Copying text command was ' + msg);
+    } catch (err) {
+      console.error('Fallback: Oops, unable to copy', err);
+    }
+    document.body.removeChild(textArea);
+  }
 
-
-
-// // window.addEventListener('scroll', function scroll(e) {
-// //   scrollCount++;
-// //   console.log(e);
-// //   if (scrollCount > 20) {
-// //     window.scrollBy(0, 100); // Scroll 100px downwards
-// //     scrollCount = 0;
-// //   }
-// //   window.onwheel = preventDefault; // modern standard
-// //   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-// //   window.ontouchmove  = preventDefault; // mobile
-// //   document.onkeydown  = preventDefaultForScrollKeys;
-// // });
-
-// let keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-
-// // function preventDefaultForScrollKeys(e) {
-// //     if (keys[e.keyCode]) {
-// //         preventDefault(e);
-// //         return false;
-// //     }
-// // }
-
-// // function scrollWin(e) {
-// //     console.log(e)
-// //   }
-
+  function copyTextToClipboard(text="nikolaus.j.roman@gmail.com") {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+      console.log('Copying to clipboard was successful!');
+    }, function(err) {
+      console.error('Could not copy text: ', err);
+    });
+  }
