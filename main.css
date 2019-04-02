@@ -241,7 +241,7 @@ video {
 }
 
 .contactMe {
-    transform: translate(0%, 50%);
+    margin-top: 20%;
 }
 
 .contactIcons {
@@ -263,6 +263,11 @@ i   {
 
 #email {
     color: white;
+}
+
+footer {
+    font-size: 0.5em;
+    text-align: center;
 }
 
 @media screen and (max-width: 1370px) {
@@ -301,10 +306,6 @@ i   {
         color: black;
     }
 
-    .contactMe {
-        transform: translate(0%, 20%);
-    }
-    
     .skillsImg {
         transform: none;
     }
